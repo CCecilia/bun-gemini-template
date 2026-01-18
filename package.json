@@ -1,6 +1,7 @@
 {
   "name": "bun-gemini-template",
-  "module": "index.ts",
+  "module": ".index.ts",
+  "version": "0.0.1",
   "type": "module",
   "private": true,
   "scripts": {
@@ -16,8 +17,10 @@
     "@google/genai": "^1.37.0"
   },
   "bun-create": {
-    "preinstall": "echo 'Installing...'",
-    "postinstall": ["echo 'Done!'"],
-    "start": "bun run echo 'Hello world!'"
+    "preinstall": "echo 'Creating project'",
+    "postinstall": [
+      "touch .env",
+      "echo \"GEMINI_API_KEY=\" > .env"
+    ]
   }
 }
