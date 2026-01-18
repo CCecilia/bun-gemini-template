@@ -9,7 +9,7 @@ bun install
 To run:
 
 ```bash
-bun start
+bun run dev
 ```
 
 Please be sure to fill in GEMINI_API_KEY env var.

@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "bun run ./src/index.ts"
+    "dev": "bun run ./src/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -14,5 +14,10 @@
   },
   "dependencies": {
     "@google/genai": "^1.37.0"
+  },
+  "bun-create": {
+    "preinstall": "echo 'Installing...'",
+    "postinstall": ["echo 'Done!'"],
+    "start": "bun run echo 'Hello world!'"
   }
 }
